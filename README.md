@@ -1,4 +1,3 @@
-```` markdown
 ## 💪 Pre-sprint Homework: The Plant Care Tracker API
 
 ### Project Overview
@@ -23,7 +22,7 @@ export interface Plant {
   status: 'Healthy' | 'Thirsty' | 'Overwatered';
 }
 
-````
+```
 
 ### Folder Structure (Required)
 
