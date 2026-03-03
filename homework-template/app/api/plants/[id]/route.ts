@@ -40,7 +40,12 @@ export async function PATCH(
 
         const plant = await db.update(id, updateInfo);
 
-        return NextResponse.json({ data: plant }, { status: 201 });
+        if (plant) {
+            return NextResponse.json({ data: plant }, { status: 201 });
+        }
+
+        return NextResponse.json({ error: `Plant with ID ${id} not found`}, { status: 404 });
+
     } catch (err) {
         return NextResponse.json({ error: 'Invalid Request'}, { status: 400 });
     }
